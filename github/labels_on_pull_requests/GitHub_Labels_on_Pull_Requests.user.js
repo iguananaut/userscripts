@@ -69,8 +69,6 @@ var ghIssuePostUrl = "/" + ghRepoUser + "/" + ghRepoName + "/issues/labels/modif
 var ghRepoLabels;
 var ghIssueLabels;
 
-ghRepoLabels = ghIssueLabels = [{name: "foo", color: "000000"}];
-
 // TODO: Make this less bad...
 function ghAppendDiscussionLabels() {
   if (ghRepoLabels === undefined || ghIssueLabels == undefined) {
