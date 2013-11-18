@@ -36,8 +36,12 @@ function ghAppendDiscussionLabels() {
   var context = {labels: ghRepoLabels, issueLabels: ghIssueLabels, dataUrl: ghIssuePostUrl,
                issue: ghPRNumber, csrf_token: ghCSRFToken};
 
-  Handlebars.registerHelper('labelChecked', function(label) {
-    return ghIssueLabels[label] ? true : false;
+  Handlebars.registerHelper('ifLabelSelected', function(label, block) {
+    if (ghIssueLabels[label]) {
+      return block.fn(this);
+    } else {
+      return block.inverse(this);
+    }
   });
 
   $("div.discussion-sidebar").append("<hr></hr>").append(ghDiscussionLabelsTemplate(context));
