@@ -33,18 +33,21 @@ function ghAppendDiscussionLabels() {
     return;
   }
   
+  // For each label in the repo mark whether it is selected in this issue
+  $.each(ghRepoLabels, function(k, v) {
+    v.selected = false;
+    $.each(ghIssueLabels, function(k2, v2) {
+      if (v.name == v2.name) {
+        v.selected = true;
+        return false;
+      }
+    });
+  });
+  
   var context = {labels: ghRepoLabels, issueLabels: ghIssueLabels, dataUrl: ghIssuePostUrl,
                issue: ghPRNumber, csrf_token: ghCSRFToken};
 
-  Handlebars.registerHelper('ifLabelSelected', function(label, block) {
-    if (ghIssueLabels[label]) {
-      return block.fn(this);
-    } else {
-      return block.inverse(this);
-    }
-  });
-
-  $("div.discussion-sidebar").append("<hr></hr>").append(ghDiscussionLabelsTemplate(context));
+  $("div.discussion-sidebar").append("<hr></hr>").append(ghDiscussionLabelsTemplate(context, options));
 }
 
 GM_xmlhttpRequest({

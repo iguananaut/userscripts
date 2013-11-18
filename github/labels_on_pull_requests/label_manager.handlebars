@@ -24,20 +24,20 @@
                         </div>
                         <div class="select-menu-list" data-filterable-for="label-filter-field" data-filterable-type="substring">
                             {{#each labels}}
-                            {{#ifLabelSelected this.name}}
+                            {{#if this.selected}}
                             <div class="select-menu-item js-navigation-item labelstyle-{{this.color}}" selected>
                             {{else}}
                             <div class="select-menu-item js-navigation-item labelstyle-{{this.color}}">
-                            {{/ifLabelSelected}}
+                            {{/if}}
                                 <span class="select-menu-item-icon octicon octicon-check"></span>
                                 <div class="select-menu-item-text">
                                     <div class="color-label-wrapper">
                                         <div data-name="{{this.name}}" class="color-label labelstyle-{{this.color}}">
-                                            {{#ifLabelSelected this.name}}
+                                            {{#if this.selected}}
                                             <input style="display: none" value="{{this.name}}" name="labels[]" checked="checked" type="checkbox">
                                             {{else}}
                                             <input style="display: none" value="{{this.name}}" name="labels[]" type="checkbox">
-                                            {{/ifLabelSelected}}
+                                            {{/if}}
                                             <span class="color" style="background-color: #{{this.color}}">&nbsp;</span>
                                             <span class="name">{{this.name}}</span>
                                             <span class="octicon octicon-remove-close"></span>
