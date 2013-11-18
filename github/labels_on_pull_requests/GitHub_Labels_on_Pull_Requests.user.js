@@ -38,7 +38,7 @@ function ghAppendDiscussionLabels() {
 
   Handlebars.registerHelper('labelChecked', function(label) {
     return ghIssueLabels[label] ? true : false;
-  }
+  });
 
   $("div.discussion-sidebar").append("<hr></hr>").append(ghDiscussionLabelsTemplate(context));
 }
