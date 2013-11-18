@@ -4,7 +4,7 @@
 // @description Adds label management to GitHub pull request pages just like normal issues
 // @include     http*://github.com/*/*/pull/*
 // @version     1
-// @downloadURL https://raw.github.com/iguananaut/userscripts/master/github/labels_on_pull_requests/github_labels_on_pull_requests.js
+// @downloadURL https://raw.github.com/iguananaut/userscripts/master/github/labels_on_pull_requests/GitHub_Labels_on_Pull_Requests.user.js
 // @grant       GM_xmlhttpRequest
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js
 // @require     http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.1.2.js
