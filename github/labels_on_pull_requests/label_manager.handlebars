@@ -33,7 +33,7 @@
                                 <div class="select-menu-item-text">
                                     <div class="color-label-wrapper">
                                         <div data-name="{{this.name}}" class="color-label labelstyle-{{this.color}}">
-                                            <input style="display: none" value="{{this.name}}" name="labels[]" checked="checked" type="checkbox">
+                                            <input style="display: none" value="{{this.name}}" name="labels[]" {{#if labelChecked this.name}}checked="checked"{{/if}} type="checkbox">
                                             <span class="color" style="background-color: #{{this.color}}">&nbsp;</span>
                                             <span class="name">{{this.name}}</span>
                                             <span class="octicon octicon-remove-close"></span>

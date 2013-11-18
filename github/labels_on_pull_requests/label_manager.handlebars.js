@@ -17,7 +17,10 @@ function program1(depth0,data) {
     + escapeExpression(((stack1 = (depth0 && depth0.color)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\">\n                                            <input style=\"display: none\" value=\""
     + escapeExpression(((stack1 = (depth0 && depth0.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" name=\"labels[]\" checked=\"checked\" type=\"checkbox\">\n                                            <span class=\"color\" style=\"background-color: #"
+    + "\" name=\"labels[]\" ";
+  stack2 = helpers['if'].call(depth0, (depth0 && depth0.labelChecked), (depth0 && depth0.name), {hash:{},inverse:self.noop,fn:self.program(6, program6, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += " type=\"checkbox\">\n                                            <span class=\"color\" style=\"background-color: #"
     + escapeExpression(((stack1 = (depth0 && depth0.color)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\">&nbsp;</span>\n                                            <span class=\"name\">"
     + escapeExpression(((stack1 = (depth0 && depth0.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
@@ -43,6 +46,12 @@ function program4(depth0,data) {
   }
 
 function program6(depth0,data) {
+  
+  
+  return "checked=\"checked\"";
+  }
+
+function program8(depth0,data) {
   
   var buffer = "", stack1;
   buffer += "\n        <li>\n            <span class=\"filter-item color-label labelstyle-"
@@ -75,7 +84,7 @@ function program6(depth0,data) {
   else { stack1 = (depth0 && depth0.issue); stack1 = typeof stack1 === functionType ? stack1.call(depth0, {hash:{},data:data}) : stack1; }
   buffer += escapeExpression(stack1)
     + "\" type=\"hidden\">\n            </form>\n        </div>\n    </div>\n    <ul class=\"color-label-list filter-list small\">\n        ";
-  stack1 = helpers.each.call(depth0, (depth0 && depth0.issueLabels), {hash:{},inverse:self.noop,fn:self.program(6, program6, data),data:data});
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.issueLabels), {hash:{},inverse:self.noop,fn:self.program(8, program8, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    </ul>\n</div>\n";
   return buffer;
