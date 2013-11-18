@@ -47,7 +47,7 @@ function ghAppendDiscussionLabels() {
   var context = {labels: ghRepoLabels, issueLabels: ghIssueLabels, dataUrl: ghIssuePostUrl,
                issue: ghPRNumber, csrf_token: ghCSRFToken};
 
-  $("div.discussion-sidebar").append("<hr></hr>").append(ghDiscussionLabelsTemplate(context, options));
+  $("div.discussion-sidebar").append("<hr></hr>").append(ghDiscussionLabelsTemplate(context));
 }
 
 GM_xmlhttpRequest({
