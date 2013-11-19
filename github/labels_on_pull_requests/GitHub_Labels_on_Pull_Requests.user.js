@@ -57,6 +57,13 @@ GM_xmlhttpRequest({
   onload: function(response) {
     // TODO: Error handling
     ghRepoLabels = JSON.parse(response.responseText);
+    // Sort the labels lexicographically; not sure what order they're coming out
+    // by default but it seems GH does this client-side _/o_O\_
+    ghRepoLabels.sort(function(a, b) {
+      if (a.name < b.name) return -1;
+      if (a.name > b.name) return 1;
+      return 0;
+    });
     ghAppendDiscussionLabels();
   }
 });
