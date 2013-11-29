@@ -28,3 +28,5 @@ In fact, GitHub allows managing labels on pull requests via the issue list UI.  
 to a pull request using GitHub's API as well.  But mysteriously, GitHub has opted not to include issue management on the
 UI for a single pull request, as they do on the UI for single issues.  This script recreates the label selection menu on
 pull requests and displays all labels currently applied to each pull request.
+
+Install via userscripts.org: http://userscripts.org/scripts/show/185095
