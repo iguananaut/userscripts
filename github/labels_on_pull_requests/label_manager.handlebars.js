@@ -30,7 +30,7 @@ function program2(depth0,data) {
   var buffer = "", stack1;
   buffer += "\n                            <div class=\"select-menu-item js-navigation-item labelstyle-"
     + escapeExpression(((stack1 = (depth0 && depth0.color)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" selected>\n                            ";
+    + " selected\">\n                            ";
   return buffer;
   }
 
