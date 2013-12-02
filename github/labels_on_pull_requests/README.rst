@@ -30,4 +30,10 @@ UI for a single pull request, as they do on the UI for single issues.  This scri
 pull requests and displays all labels currently applied to each pull request.
 
 Install via userscripts.org: http://userscripts.org/scripts/show/185095
+
+.. warning::
+
+    This script requires an extension like Tampermonkey to work with Google Chrome, as it uses some features of
+    Greasemonkey that are not supported out-of-the-box by Chrome.
+
 For further details, read my blog post on this issue: http://iguananaut.net/blog/programming/github-labels-on-pull-requests.html
